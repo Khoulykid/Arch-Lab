@@ -1,0 +1,4 @@
+Running: xsim.dir/ImmGen_tb_behav/xsimk.exe -simmode gui -wdb ImmGen_tb_behav.wdb -simrunnum 0 -socket 51926
+Design successfully loaded
+Design Loading Memory Usage: 7164 KB (Peak: 7164 KB)
+Design Loading CPU Usage: 15 ms
