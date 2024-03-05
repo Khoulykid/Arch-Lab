@@ -1,9 +1,0 @@
-0.7
-2020.2
-Apr 18 2022
-16:05:34
-C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
-C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sim_1/new/DataMem_tb.v,1709644383,verilog,,,,DataMem_tb,,,,,,,,
-C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sim_1/new/InstMem_tb.v,1709643693,verilog,,,,InstMem_tb,,,,,,,,
-C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/DataMem.v,1709643162,verilog,,C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sim_1/new/DataMem_tb.v,,DataMem,,,,,,,,
-C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/InstMem.v,1709643861,verilog,,C:/Users/khoulykid/Desktop/Lab05/Lab05/Lab05.srcs/sim_1/new/InstMem_tb.v,,InstMem,,,,,,,,
