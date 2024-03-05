@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Feb  6 16:53:08 2024
+# Process ID: 22792
+# Current directory: C:/Users/khoulykid/Desktop/Lab1Exp2/Lab1Exp2.runs/synth_1
+# Command line: vivado.exe -log inverter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inverter.tcl
+# Log file: C:/Users/khoulykid/Desktop/Lab1Exp2/Lab1Exp2.runs/synth_1/inverter.vds
+# Journal file: C:/Users/khoulykid/Desktop/Lab1Exp2/Lab1Exp2.runs/synth_1\vivado.jou
+# Running On: CSE-P07-2168-2, OS: Windows, CPU Frequency: 3696 MHz, CPU Physical cores: 8, Host memory: 34020 MB
+#-----------------------------------------------------------
+source inverter.tcl -notrace

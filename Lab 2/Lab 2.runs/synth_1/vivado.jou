@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Feb 18 12:01:56 2024
+# Process ID: 21020
+# Current directory: C:/Users/khoulykid/Desktop/Lab 2/Lab 2.runs/synth_1
+# Command line: vivado.exe -log TopExp3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopExp3.tcl
+# Log file: C:/Users/khoulykid/Desktop/Lab 2/Lab 2.runs/synth_1/TopExp3.vds
+# Journal file: C:/Users/khoulykid/Desktop/Lab 2/Lab 2.runs/synth_1\vivado.jou
+# Running On: CSE-P07-2168-2, OS: Windows, CPU Frequency: 3696 MHz, CPU Physical cores: 8, Host memory: 34020 MB
+#-----------------------------------------------------------
+source TopExp3.tcl -notrace
