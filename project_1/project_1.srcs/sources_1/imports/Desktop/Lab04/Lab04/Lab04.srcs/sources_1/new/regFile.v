@@ -42,7 +42,7 @@ module regFile  #(parameter n = 32)(
                 regFile[i] = 32'b0;
              end 
          end else  
-         if (wr) begin      
+         if (wr && (writeAddr)) begin      
             regFile[writeAddr] = writeData;
          end 
     end 

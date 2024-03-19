@@ -27,7 +27,7 @@ module TOP(
     input rst,  //reset input
     input SSDclk,   //The clock for SSD
     output reg [15:0] LED,  //The LEDs
-    output [3:0] Anode, //Anodes for the SSD
+    output [7:0] Anode, //Anodes for the SSD
     output [6:0] LED_out    //The SSD
 );
     
@@ -40,12 +40,12 @@ module TOP(
     wire new_clk, new_rst;  //wires to hold the value of the clock and reset after the push button.
     reg [12:0] SSD; //a reg to hold the value of the output we need before conversion for the SSD
     
-    nBitRegister #(32) PC(.data(newpc), .clk(new_clk), .rst(_newrst), .load(1), .outData(PCout));   //The PC
+    nBitRegister #(32) PC(.data(newpc), .clk(new_clk), .rst(new_rst), .load(1), .outData(PCout));   //The PC
     
     InstMem instructions(.addr(PCout[7:2]), .data_out(inst));   //The Instruction Memory
     
     regFile register_file( .readAddr1(inst[19:15]), .readAddr2(inst[24:20]), 
-    .writeAddr(inst[11:7]), .writeData(writedata), .clk(new_clk), .rst(rst), .wr(wr),
+    .writeAddr(inst[11:7]), .writeData(writedata), .clk(new_clk), .rst(new_rst), .wr(wr),
     .rd1(rd1), .rd2(rd2));  //Reg File
     
     ImmGen immediate(.gen_out(gen_out), .inst(inst));   //Immediate Generator
@@ -58,11 +58,11 @@ module TOP(
     cu CPU( .inst62(inst[6:2]), .branch(branch), .memread(memread), .memtoreg(memtoreg),
     .ALUop(ALUop), .memwrite(memwrite), .ALUsrc(ALUsrc), .regwrite(wr));    //the CPU
     
-    ALUcu ACPU(.ALUop(ALUop), .inst_14_2({inst[14], inst[2]}), .inst_30(inst[30]), .ALUsel(ALUsel));    //the ALUCU
+    ALUcu ACPU(.ALUop(ALUop), .inst_14_2(inst[14:12]), .inst_30(inst[30]), .ALUsel(ALUsel));    //the ALUCU
     
     mMuxes #(32) ALUinputmux(.b(rd2), .a(gen_out), .s(ALUsrc), .out(ALUmux));   //All the muxes in the circuit.
     mMuxes #(32) regwritedata(.a(memdata), .b(ALUout), .s(memtoreg), .out(writedata));
-    mMuxes #(32) PCinput(.a(PCout+{gen_out[30:0], 0}), .b(PCout+4), .s(branch&zf), .out(newpc));
+    mMuxes #(32) PCinput(.a(PCout+{gen_out[30:0], 1'b0}), .b(PCout+4),.s(branch&zf), .out(newpc));
     
     always @* begin
         case(ledSel)
@@ -92,7 +92,8 @@ module TOP(
     
     push_button_detector Push_clk(.clk(SSDclk), .rst(0), .x(clk), .z(new_clk));
     push_button_detector Push_rst(.clk(SSDclk), .rst(0), .x(rst), .z(new_rst));
-    F_Dig_7_dig(.clk(SSDclk), .SW(SSD), .Anode(Anode), .LED_out(LED_out));
+    F_Dig_7_dig sevenSeg(.clk(SSDclk), .SW(SSD), .Anode(Anode[3:0]), .LED_out(LED_out));
+    assign Anode[7:4] = 4'b1111;
     
     
 

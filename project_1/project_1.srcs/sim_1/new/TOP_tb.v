@@ -27,12 +27,11 @@ module TOP_tb();
     reg rst;
     reg SSDclk;
     wire [15:0] LED;
-    wire [12:0] SSD;
-    TOP DUT(.ledSel(ledSel), .ssdSel(ssdSel), .clk(clk), .rst(rst), .SSDclk(SSDclk), .LED(LED), .SSD(SSD));
+    TOP DUT(.ledSel(ledSel), .ssdSel(ssdSel), .clk(clk), .rst(rst), .SSDclk(SSDclk), .LED(LED));
     
     initial begin
-        clk = 1;
-        forever #10 clk = ~clk;
+        SSDclk = 1;
+        forever #10 SSDclk = ~SSDclk;
     end
     
     initial begin
