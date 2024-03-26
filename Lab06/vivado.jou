@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar 12 09:01:13 2024
+# Process ID: 11260
+# Current directory: A:/AUC/Arch-Lab/Lab06
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10052 A:\AUC\Arch-Lab\Lab06\Lab06.xpr
+# Log file: A:/AUC/Arch-Lab/Lab06/vivado.log
+# Journal file: A:/AUC/Arch-Lab/Lab06\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project A:/AUC/Arch-Lab/Lab06/Lab06.xpr
+update_compile_order -fileset sources_1
+save_project_as project_1 A:/AUC/Arch-Lab/project_1 -force
+import_files -norecurse {{A:/AUC/Arch-Lab/Lab 2/Lab 2.srcs/sources_1/imports/new/BCD.v} {A:/AUC/Arch-Lab/Lab 2/Lab 2.srcs/sources_1/imports/new/F_Dig_7_dig.v}}
+update_compile_order -fileset sources_1
+file mkdir A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new
+close [ open A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v w ]
+add_files A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TOP [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]

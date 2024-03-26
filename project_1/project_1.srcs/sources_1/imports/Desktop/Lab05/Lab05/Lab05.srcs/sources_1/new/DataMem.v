@@ -24,9 +24,9 @@ module DataMem(input clk, input MemRead, input MemWrite,
     reg [31:0] mem [0:63];
     assign data_out = (MemRead)? mem[addr]: data_out; 
     initial begin
-        mem[0]=32'd1;
-        mem[1]=32'd8;
-        mem[2]=32'd20;
+        mem[0]=32'd17;
+        mem[1]=32'd9;
+        mem[2]=32'd25;
     end
     always @ (posedge clk) begin
         if (MemWrite) begin 

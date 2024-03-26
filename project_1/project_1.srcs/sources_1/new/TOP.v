@@ -23,12 +23,12 @@
 module TOP(
     input [1:0] ledSel, //input to select what the output on the LED will represent
     input [3:0] ssdSel, //to choose what will be represented on the SSD
-    input clk,  //clock input
-    input rst,  //reset input
+    input new_clk,  //clock input
+    input new_rst,  //reset input
     input SSDclk,   //The clock for SSD
     output reg [15:0] LED,  //The LEDs
     output [7:0] Anode, //Anodes for the SSD
-    output [6:0] LED_out    //The SSD
+    output [6:0] LED_out   //The SSD
 );
     
     wire [31:0] inst;   //Wire to hold the current instruction
@@ -37,7 +37,7 @@ module TOP(
     wire [31:0] rd1, rd2, gen_out, ALUmux, ALUout, memdata, ALUsrc; //Values to be carried from one place to another
     wire [1:0] ALUop;   //The ALU opcode to decide on the ALU operation.
     wire [3:0] ALUsel;  //The Selector to decide on the ALU operation.
-    wire new_clk, new_rst;  //wires to hold the value of the clock and reset after the push button.
+    //wire new_clk, new_rst;  //wires to hold the value of the clock and reset after the push button.
     reg [12:0] SSD; //a reg to hold the value of the output we need before conversion for the SSD
     
     nBitRegister #(32) PC(.data(newpc), .clk(new_clk), .rst(new_rst), .load(1), .outData(PCout));   //The PC
@@ -90,8 +90,8 @@ module TOP(
         endcase
     end
     
-    push_button_detector Push_clk(.clk(SSDclk), .rst(0), .x(clk), .z(new_clk));
-    push_button_detector Push_rst(.clk(SSDclk), .rst(0), .x(rst), .z(new_rst));
+    //push_button_detector Push_clk(.clk(SSDclk), .rst(0), .x(clk), .z(new_clk));
+    //push_button_detector Push_rst(.clk(SSDclk), .rst(0), .x(rst), .z(new_rst));
     F_Dig_7_dig sevenSeg(.clk(SSDclk), .SW(SSD), .Anode(Anode[3:0]), .LED_out(LED_out));
     assign Anode[7:4] = 4'b1111;
     

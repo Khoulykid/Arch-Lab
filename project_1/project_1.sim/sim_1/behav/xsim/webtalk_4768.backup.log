@@ -2,12 +2,12 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 12 15:48:27 2024
-# Process ID: 7636
+# Start of session at: Mon Mar 25 21:37:30 2024
+# Process ID: 4768
 # Current directory: A:/AUC/Arch-Lab/project_1/project_1.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source A:/AUC/Arch-Lab/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/TOP_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: A:/AUC/Arch-Lab/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: A:/AUC/Arch-Lab/project_1/project_1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source A:/AUC/Arch-Lab/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/TOP_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Mar 12 15:48:28 2024...
+INFO: [Common 17-206] Exiting Webtalk at Mon Mar 25 21:37:31 2024...

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/sarahtest/sarahtest.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/sarahtest/sarahtest.srcs/sim_1/new/DataMem_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/sarahtest/sarahtest.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

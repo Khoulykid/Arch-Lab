@@ -27,18 +27,93 @@ module TOP_tb();
     reg rst;
     reg SSDclk;
     wire [15:0] LED;
-    TOP DUT(.ledSel(ledSel), .ssdSel(ssdSel), .clk(clk), .rst(rst), .SSDclk(SSDclk), .LED(LED));
+    wire [12:0] SSD;
+    TOP DUT(.ledSel(ledSel), .ssdSel(ssdSel), .clk(clk), .rst(rst), .SSDclk(SSDclk), .LED(LED), .SSD(SSD));
     
-    initial begin
-        SSDclk = 1;
-        forever #10 SSDclk = ~SSDclk;
-    end
+    
     
     initial begin
         rst = 1;
-        #40;
+        SSDclk=1;
+        #1;
+        SSDclk = 0;
+        #1
         rst = 0;
-        #240;
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        SSDclk = 0;
+        #1
+        SSDclk = 1;
+        #1
+        ledSel = 2'b00;
+        ssdSel = 0;
+        #10
+        ledSel = 2'b01;
+        ssdSel = 1;
+        #10
+        ledSel = 2'b10;
+        ssdSel = 2;
+        #10
+        ledSel = 2'b11;
+        ssdSel = 3;
+        #10
+        ssdSel = 4;
+        #10
+        ssdSel = 5;
+        #10
+        ssdSel = 6;
+        #10
+        ssdSel = 7;
+        #10
+        ssdSel = 8;
+        #10
+        ssdSel = 9;
+        #10
+        ssdSel = 10;
+        #10
+        ssdSel = 11;
+        #10
+                
         $finish;
     end
     
