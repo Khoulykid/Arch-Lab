@@ -101,7 +101,7 @@ module RISCV_pipeline(
     InstMem instructions(.addr(PCout[7:2]), .data_out(inst));   //The Instruction Memory
     
     regFile register_file( .readAddr1(IF_ID_Inst[19:15]), .readAddr2(IF_ID_Inst[24:20]), 
-    .writeAddr(MEM_WB_Rd), .writeData(writedata), .clk(new_clk), .rst(new_rst), .wr(MEM_WB_Ctrl[1]),
+    .writeAddr(MEM_WB_Rd), .writeData(writedata), .clk(!new_clk), .rst(new_rst), .wr(MEM_WB_Ctrl[1]),
     .rd1(rd1), .rd2(rd2));  //Reg File
     
     ImmGen immediate(.gen_out(gen_out), .inst(IF_ID_Inst));   //Immediate Generator
