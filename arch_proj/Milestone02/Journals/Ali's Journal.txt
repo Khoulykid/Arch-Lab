@@ -1,0 +1,3 @@
+Tuesday March 19th  : worked with Moaz to implement  Lab06 
+Wednesday March 27th: Expanded the R and I type instructions, modified the ALU, the shifter, and ALUcu modules. 
+Thurusday March 28th: riguorously tested the program, and debugged it wrote the report, and made the final touches to the TOP.v module

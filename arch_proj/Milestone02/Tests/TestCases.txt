@@ -1,0 +1,25 @@
+// All registers are initialized to a value equal to its index. ex: x13 = 13
+
+add x0, x0, x0                                         
+sub x1, x3, x1          x1 = 2                         
+sll x3, x4, x5          x3 =128                        
+slt x4, x5, x6          x4 = 1                         
+slt x5, x6, x5          x5 = 0                        
+xor x6, x7, x8          x6 = 15                        
+srl x7, x7, x1          x7 = 1                         
+or x8, x8, x15          x8 = 15                       
+and x9, x9, x10         x9 = 8                         
+addi x10, x10, 2        x10 = 12                       
+slti x11, x11, 31       x11 = 1                        
+xori x12, x15, 10       x12 = 5                        
+ori x13, x15, 10        x13 = 15                       
+andi x14, x15, 10       x14 = 10                       
+lui x15, 5              x15 = 20480                    
+auipc x16,              x16 = 12348                    
+jal x17, 8              x17 = 68                       
+addi x18, x18, 1        x18 = 18 // skipped            
+addi x19, x19, 1        x19 = 20                       
+addi x20, x20, 1        x20 = 21                       
+jalr x21, x10, 80       x21 = 84                       
+addi x22, x22, 1        x22 = 22 // skipped            
+                                                       

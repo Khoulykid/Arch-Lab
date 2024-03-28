@@ -12,7 +12,7 @@ E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v,1711605550
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v,1711575150,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v,,Mux2x1,,,,,,,,
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v,1711606043,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/defines.v,TOP,,,,,,,,
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v,1711599112,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/defines.v,branch_control,,,,,,,,
-E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v,1711604098,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v,,cu,,,,,,,,
+E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v,1711604671,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v,,cu,,,,,,,,
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/defines.v,1602891949,verilog,,,,,,,,,,,,
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v,1711575150,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v,,mMuxes,,,,,,,,
 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v,1711575150,verilog,,E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v,,nBitRegister,,,,,,,,
