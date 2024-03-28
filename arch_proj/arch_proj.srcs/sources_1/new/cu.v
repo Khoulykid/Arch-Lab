@@ -45,7 +45,7 @@ module cu(
             5'b01101: begin branch = 0; lui = 1; auipc = 0; jal = 0; jalr = 0; regwrite = 1; memwrite = 0; end // lui
             5'b00101: begin branch = 0; auipc = 1; regwrite = 1; memwrite = 0; jal = 0; jalr = 0;   end // auipc
             5'b11011: begin branch = 0; auipc = 0; lui = 0; jal = 1; jalr = 0;  memwrite = 0;  regwrite = 1; end // jal
-            5'b11001: begin branch = 0; auipc = 0; lui = 0; jal = 0; jalr = 1;  memwrite = 0;  regwrite = 1;; end // jalr
+            5'b11001: begin branch = 0; auipc = 0; lui = 0; jal = 1; jalr = 1;  memwrite = 0;  regwrite = 1;; end // jalr
         endcase
     end
 endmodule

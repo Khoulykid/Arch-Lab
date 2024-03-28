@@ -75,8 +75,8 @@ module TOP(
     // newPC mux 
     wire [31:0] tempPc1;
     wire [31:0] tempPc2;  
-    mMuxes #(32) PCinput1(.a(rd1 +{gen_out[30:0], 1'b0}), .b(PCout+4),.s(jalr), .out(tempPc1));
-    mMuxes #(32) PCinput2(.a(PCout+{gen_out[30:0], 1'b0}), .b(PCout+{gen_out[30:0], 1'b0}),.s(jalr), .out(tempPc2)); // recheck 
+    mMuxes #(32) PCinput1(.a(rd1 +{gen_out[31:0]}), .b(PCout+4),.s(jalr), .out(tempPc1));
+    mMuxes #(32) PCinput2(.a(PCout+{gen_out[31:0]}), .b(PCout+gen_out[31:0]),.s(jalr), .out(tempPc2)); // recheck 
     mMuxes #(32) PCinput12(.a(tempPc2), .b(tempPc1),.s(jal | branch_out), .out(newpc)); 
     
     // regWrite mux 
