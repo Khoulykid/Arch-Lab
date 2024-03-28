@@ -19,10 +19,20 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module sl1 #(parameter n = 8) (
         input [n-1 : 0] a, 
-        output[n-1 : 0] b
+        input [4:0] shamt,
+        input [1:0] type,
+        output reg [n-1 : 0] r
     );
-    assign b = {a[6:0],1'b0};
+    always @ * begin
+        r = 0; 
+        case (type) // alu OP 
+            2'b   : r =  a << shamt;   
+            2'b   : r =  a >> shamt; 
+            2'b   : r =  a >>> shamt; 
+            default : r = a; 
+        endcase 
+    end   
+    
 endmodule

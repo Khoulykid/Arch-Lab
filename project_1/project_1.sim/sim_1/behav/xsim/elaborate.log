@@ -1,12 +1,16 @@
-Vivado Simulator 2018.2
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: A:/Xillinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 30f9c9bf2f30429cb3cf62cc3dbcfdf1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pipe_tb_behav xil_defaultlib.pipe_tb xil_defaultlib.glbl -log elaborate.log 
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 30f9c9bf2f30429cb3cf62cc3dbcfdf1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TOP_tb_behav xil_defaultlib.TOP_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port load [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/RISCV_pipeline.v:45]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 33 for port s [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALU.v:35]
-WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 7 for port SW [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:36]
-WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/RISCV_pipeline.v:131]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 33 for port 's' [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALU.v:35]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:59]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:63]
+WARNING: [VRFC 10-3091] actual bit length 13 differs from formal bit length 7 for port 'SW' [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:36]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:71]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:80]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [E:/AUC/Arch/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:86]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,10 +18,6 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Mux2x1
 Compiling module xil_defaultlib.DFlipFlop
 Compiling module xil_defaultlib.nBitRegister(n=32)
-Compiling module xil_defaultlib.nBitRegister(n=64)
-Compiling module xil_defaultlib.nBitRegister(n=155)
-Compiling module xil_defaultlib.nBitRegister(n=107)
-Compiling module xil_defaultlib.nBitRegister(n=71)
 Compiling module xil_defaultlib.InstMem
 Compiling module xil_defaultlib.regFile
 Compiling module xil_defaultlib.ImmGen
@@ -31,7 +31,7 @@ Compiling module xil_defaultlib.ALUcu
 Compiling module xil_defaultlib.mMuxes(n=32)
 Compiling module xil_defaultlib.BCD
 Compiling module xil_defaultlib.F_Dig_7_dig
-Compiling module xil_defaultlib.RISCV_pipeline
-Compiling module xil_defaultlib.pipe_tb
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.TOP_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot pipe_tb_behav
+Built simulation snapshot TOP_tb_behav

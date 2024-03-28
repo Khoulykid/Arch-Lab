@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar 27 23:33:14 2024
+# Process ID: 24880
+# Current directory: E:/AUC/Arch/Arch-Lab/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32160 E:\AUC\Arch\Arch-Lab\project_1\project_1.xpr
+# Log file: E:/AUC/Arch/Arch-Lab/project_1/vivado.log
+# Journal file: E:/AUC/Arch/Arch-Lab/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -part xcvu065-ffvc1517-1-i E:/AUC/Arch/Arch-Lab/project_1/project_1.xpr
+add_files -norecurse {E:/AUC/Arch/VerilogSrc/prv32_ALU.v E:/AUC/Arch/VerilogSrc/ImmGen.v E:/AUC/Arch/VerilogSrc/defines.v}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TOP_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source TOP_tb.tcl
+relaunch_sim
+run 10 us
+relaunch_sim
+import_files
