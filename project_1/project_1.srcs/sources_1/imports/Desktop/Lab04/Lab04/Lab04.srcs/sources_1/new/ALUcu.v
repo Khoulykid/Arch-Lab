@@ -35,14 +35,14 @@ module ALUcu(
             2'b01: ALUsel = 4'b0110;
             default: begin
                 case(inst_14_12)
-                    F3_ADD: ALUsel = inst_30 ? ALU_SUB : ALU_ADD;
-                    F3_SLL: ALUsel = ALU_SLL;
-                    F3_SLT: ALUsel = ALU_SLT;
-                    F3_SLTU:ALUsel = ALU_SLTU;
-                    F3_XOR: ALUsel = ALU_XOR;
-                    F3_SRL: ALUsel = inst_30 ? ALU_SRA : ALU_SRL;
-                    F3_OR : ALUsel = ALU_OR;
-                    F3_AND: ALUsel = ALU_AND;
+                    `F3_ADD: ALUsel = inst_30 ? `ALU_SUB : `ALU_ADD;
+                    `F3_SLL: ALUsel = `ALU_SLL;
+                    `F3_SLT: ALUsel = `ALU_SLT;
+                    `F3_SLTU:ALUsel = `ALU_SLTU;
+                    `F3_XOR: ALUsel = `ALU_XOR;
+                    `F3_SRL: ALUsel = inst_30 ? `ALU_SRA : `ALU_SRL;
+                    `F3_OR : ALUsel = `ALU_OR;
+                    `F3_AND: ALUsel = `ALU_AND;
                 endcase
             end
         endcase
