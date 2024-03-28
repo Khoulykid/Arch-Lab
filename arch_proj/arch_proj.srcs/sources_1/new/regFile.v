@@ -39,7 +39,7 @@ module regFile  #(parameter n = 32)(
     always @(posedge clk or posedge rst) begin 
          if (rst) begin      
              for (i =0; i < 32; i = i+1) begin 
-                regFile[i] = 32'b0;
+                regFile[i] = i;
              end 
          end else  
          if (wr && (writeAddr)) begin      

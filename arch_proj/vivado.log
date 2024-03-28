@@ -1,0 +1,1417 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar 28 06:10:15 2024
+# Process ID: 27568
+# Current directory: E:/AUC/Arch/Arch-Lab/arch_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34132 E:\AUC\Arch\Arch-Lab\arch_proj\arch_proj.xpr
+# Log file: E:/AUC/Arch/Arch-Lab/arch_proj/vivado.log
+# Journal file: E:/AUC/Arch/Arch-Lab/arch_proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/AUC/DD1/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 711.789 ; gain = 86.074
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 06:31:20 2024...
+ject: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 647.488 ; gain = 51.367
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v w ]
+add_files E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v
+update_compile_order -fileset sources_1
+close [ open E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v w ]
+add_files E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v
+update_compile_order -fileset sources_1
+close [ open E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v w ]
+add_files E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ImmGen.v] -no_script -reset -force -quiet
+remove_files  E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ImmGen.v
+export_ip_user_files -of_objects  [get_files E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALU.v] -no_script -reset -force -quiet
+remove_files  E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALU.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v w ]
+add_files -fileset sim_1 E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'n_bit_RCA' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj n_bit_RCA_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Full_Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Full_Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/n_bit_RCA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module n_bit_RCA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot n_bit_RCA_behav xil_defaultlib.n_bit_RCA xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot n_bit_RCA_behav xil_defaultlib.n_bit_RCA xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Full_Adder
+Compiling module xil_defaultlib.n_bit_RCA
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot n_bit_RCA_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/xsim.dir/n_bit_RCA_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 28 06:38:34 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "n_bit_RCA_behav -key {Behavioral:sim_1:Functional:n_bit_RCA} -tclbatch {n_bit_RCA.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source n_bit_RCA.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'n_bit_RCA_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 752.359 ; gain = 23.527
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'r' on this module [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+ERROR: [VRFC 10-3180] cannot find port 'inst_14_2' on this module [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:64]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+ERROR: [VRFC 10-3180] cannot find port 'inst_14_2' on this module [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:64]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 28 06:40:45 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_tb_behav -key {Behavioral:sim_1:Functional:top_tb} -tclbatch {top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 759.793 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 779.992 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 779.992 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 779.992 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 834.406 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 834.406 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:77]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:78]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:79]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:84]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'out' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:85]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:86]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 510 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 834.406 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 843.805 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'a' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v:43]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 847.422 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 849.781 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 850.000 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 850.000 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'shamt' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 850.000 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:46]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'ALUsrc' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:62]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 's' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:47]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 851.141 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:47]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/ALUcu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DFlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DFlipFlop
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/InstMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/Mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/branch_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cu
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/cu.v:48]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/mMuxes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mMuxes
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/nBitRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nBitRegister
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/prv32_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prv32_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/regFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/rv32_ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32_ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/sl1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sl1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.sim/sim_1/behav/xsim'
+"xelab -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/AUC/DD1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto d163dad30510455790313f78bbaa67d9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3755] too many parameters for module instance 'ALU' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'load' [E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sources_1/new/TOP.v:47]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Mux2x1
+Compiling module xil_defaultlib.DFlipFlop
+Compiling module xil_defaultlib.nBitRegister(n=32)
+Compiling module xil_defaultlib.InstMem
+Compiling module xil_defaultlib.regFile
+Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.sl1(n=32)
+Compiling module xil_defaultlib.prv32_ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.cu
+Compiling module xil_defaultlib.ALUcu
+Compiling module xil_defaultlib.branch_control
+Compiling module xil_defaultlib.mMuxes(n=32)
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 515 ns : File "E:/AUC/Arch/Arch-Lab/arch_proj/arch_proj.srcs/sim_1/new/top_tb.v" Line 40
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 859.551 ; gain = 0.000
+save_wave_config {E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg
+set_property xsim.view E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg [get_filesets sim_1]

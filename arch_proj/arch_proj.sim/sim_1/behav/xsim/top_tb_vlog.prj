@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../arch_proj.srcs/sources_1/new/ALUcu.v" \
+"../../../../arch_proj.srcs/sources_1/new/DFlipFlop.v" \
+"../../../../arch_proj.srcs/sources_1/new/DataMem.v" \
+"../../../../arch_proj.srcs/sources_1/new/InstMem.v" \
+"../../../../arch_proj.srcs/sources_1/new/Mux2x1.v" \
+"../../../../arch_proj.srcs/sources_1/new/TOP.v" \
+"../../../../arch_proj.srcs/sources_1/new/branch_control.v" \
+"../../../../arch_proj.srcs/sources_1/new/cu.v" \
+"../../../../arch_proj.srcs/sources_1/new/mMuxes.v" \
+"../../../../arch_proj.srcs/sources_1/new/nBitRegister.v" \
+"../../../../arch_proj.srcs/sources_1/new/prv32_ALU.v" \
+"../../../../arch_proj.srcs/sources_1/new/regFile.v" \
+"../../../../arch_proj.srcs/sources_1/new/rv32_ImmGen.v" \
+"../../../../arch_proj.srcs/sources_1/new/sl1.v" \
+"../../../../arch_proj.srcs/sim_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

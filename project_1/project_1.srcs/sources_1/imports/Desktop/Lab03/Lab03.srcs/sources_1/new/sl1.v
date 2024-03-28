@@ -28,9 +28,9 @@ module sl1 #(parameter n = 8) (
     always @ * begin
         r = 0; 
         case (type) // alu OP 
-            2'b   : r =  a << shamt;   
-            2'b   : r =  a >> shamt; 
-            2'b   : r =  a >>> shamt; 
+            2'b00  : r =  a >> shamt;   
+            2'b10  : r =  a >>> shamt; 
+            2'b01  : r =  a << shamt; 
             default : r = a; 
         endcase 
     end   

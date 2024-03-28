@@ -18,18 +18,26 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+`include "defines.v"
 
+`include "defines.v"
 
-module ImmGen(output reg [31:0] gen_out, input [31:0] inst);
-    always @ (*) begin 
-        if (inst[6:5] == 2'b00) begin 
-            gen_out = {{20{inst[31]}} , inst[31:20] } ;
-        end
-        else if (inst[6:5] == 2'b01) begin 
-            gen_out = {{20{inst[31]}} , inst[31:25], inst[11:7]} ;
-        end 
-        else if (inst[6] == 1'b1) begin 
-            gen_out = {{20{inst[31]}} , inst [7], inst[31:25], inst[11:8]} ;
-        end 
-    end 
+module rv32_ImmGen (
+    input  wire [31:0]  IR,
+    output reg  [31:0]  Imm
+);
+
+always @(*) begin
+	case (`OPCODE)
+		`OPCODE_Arith_I   : 	Imm = { {21{IR[31]}}, IR[30:25], IR[24:21], IR[20] };
+		`OPCODE_Store     :     Imm = { {21{IR[31]}}, IR[30:25], IR[11:8], IR[7] };
+		`OPCODE_LUI       :     Imm = { IR[31], IR[30:20], IR[19:12], 12'b0 };
+		`OPCODE_AUIPC     :     Imm = { IR[31], IR[30:20], IR[19:12], 12'b0 };
+		`OPCODE_JAL       : 	Imm = { {12{IR[31]}}, IR[19:12], IR[20], IR[30:25], IR[24:21], 1'b0 };
+		`OPCODE_JALR      : 	Imm = { {21{IR[31]}}, IR[30:25], IR[24:21], IR[20] };
+		`OPCODE_Branch    : 	Imm = { {20{IR[31]}}, IR[7], IR[30:25], IR[11:8], 1'b0};
+		default           : 	Imm = { {21{IR[31]}}, IR[30:25], IR[24:21], IR[20] }; // IMM_I
+	endcase 
+end
+
 endmodule
