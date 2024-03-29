@@ -15,3 +15,5 @@ update_compile_order -fileset sources_1
 launch_simulation
 open_wave_config E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg
 source top_tb.tcl
+save_wave_config {E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg}
+close_sim

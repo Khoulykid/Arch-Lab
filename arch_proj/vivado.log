@@ -114,3 +114,8 @@ xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 778.93
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 778.930 ; gain = 91.047
+save_wave_config {E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 21:14:38 2024...
