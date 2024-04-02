@@ -1,0 +1,3 @@
+Tuesday March 19th  : Developed the single cycle processor for Lab06 
+Wednesday March 27th: Drawn the Datapath to support all instructions implemented the branchCU and the RFinput Mux and PCinput mux
+Thurusday March 28th: Added support for Jal, Jalr, AUIPC, LUI instructions, Modified the TOP module accordingly, added testcases 

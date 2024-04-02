@@ -1,4 +1,5 @@
 #-----------------------------------------------------------
+<<<<<<< HEAD
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
@@ -8,9 +9,28 @@
 # Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8524 A:\AUC\Arch-Lab\arch_proj\arch_proj.xpr
 # Log file: A:/AUC/Arch-Lab/arch_proj/vivado.log
 # Journal file: A:/AUC/Arch-Lab/arch_proj\vivado.jou
+=======
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar 28 18:49:17 2024
+# Process ID: 16992
+# Current directory: E:/AUC/Arch/Arch-Lab/arch_proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14996 E:\AUC\Arch\Arch-Lab\arch_proj\arch_proj.xpr
+# Log file: E:/AUC/Arch/Arch-Lab/arch_proj/vivado.log
+# Journal file: E:/AUC/Arch/Arch-Lab/arch_proj\vivado.jou
+>>>>>>> 59376b3aefc0cd2dfde50703d087b9ee3f05e319
 #-----------------------------------------------------------
 start_gui
 open_project -part xc7k70tfbv676-1 A:/AUC/Arch-Lab/arch_proj/arch_proj.xpr
 update_compile_order -fileset sources_1
+<<<<<<< HEAD
 save_project_as project_3 A:/AUC/Arch-Lab/project_3 -force
 update_compile_order -fileset sources_1
+=======
+launch_simulation
+open_wave_config E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg
+source top_tb.tcl
+save_wave_config {E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg}
+close_sim
+>>>>>>> 59376b3aefc0cd2dfde50703d087b9ee3f05e319

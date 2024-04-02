@@ -71,3 +71,9 @@ relaunch_sim
 save_wave_config {E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg}
 add_files -fileset sim_1 -norecurse E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg
 set_property xsim.view E:/AUC/Arch/Arch-Lab/arch_proj/top_tb_behav.wcfg [get_filesets sim_1]
+<<<<<<< HEAD
+=======
+relaunch_sim
+relaunch_sim
+close_sim
+>>>>>>> 59376b3aefc0cd2dfde50703d087b9ee3f05e319
