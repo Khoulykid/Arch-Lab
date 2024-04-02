@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=A:/Xillinx/SDK/2018.2/bin;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:A:/Xillinx/Vivado/2018.2/bin
+  PATH=E:/AUC/DD1/SDK/2019.1/bin:E:/AUC/DD1/Vivado/2019.1/bin
 else
-  PATH=A:/Xillinx/SDK/2018.2/bin;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/lib/nt64:A:/Xillinx/Vivado/2018.2/bin:$PATH
+  PATH=E:/AUC/DD1/SDK/2019.1/bin:E:/AUC/DD1/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='A:/AUC/Arch-Lab/project_1/project_1.runs/synth_1'
+HD_PWD='E:/AUC/Arch/Arch-Lab/project_2/project_2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+EAStep vivado -log RISCV_pipeline.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV_pipeline.tcl

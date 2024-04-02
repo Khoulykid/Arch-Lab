@@ -1,16 +1,16 @@
 //
 // Vivado(TM)
 // rundef.js: a Vivado-generated Runs Script for WSH 5.1/5.6
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //
 
 var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "A:/Xillinx/SDK/2018.2/bin;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/lib/nt64;A:/Xillinx/Vivado/2018.2/bin;";
+  PathVal = "E:/AUC/DD1/SDK/2019.1/bin;E:/AUC/DD1/Vivado/2019.1/bin;";
 } else {
-  PathVal = "A:/Xillinx/SDK/2018.2/bin;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/bin/nt64;A:/Xillinx/Vivado/2018.2/ids_lite/ISE/lib/nt64;A:/Xillinx/Vivado/2018.2/bin;" + PathVal;
+  PathVal = "E:/AUC/DD1/SDK/2019.1/bin;E:/AUC/DD1/Vivado/2019.1/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl" );
+         "-log RISCV_pipeline.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISCV_pipeline.tcl" );
 
 
 
