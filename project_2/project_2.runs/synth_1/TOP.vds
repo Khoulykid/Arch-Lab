@@ -1,0 +1,808 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Mar 19 16:17:45 2024
+# Process ID: 14784
+# Current directory: A:/AUC/Arch-Lab/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: A:/AUC/Arch-Lab/project_1/project_1.runs/synth_1/TOP.vds
+# Journal file: A:/AUC/Arch-Lab/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16800 
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:71]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:80]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:86]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 368.188 ; gain = 111.297
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:23]
+INFO: [Synth 8-6157] synthesizing module 'nBitRegister' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/nBitRegister.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Mux2x1' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/Mux2x1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Mux2x1' (1#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/Mux2x1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DFlipFlop' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/DFlipFlop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DFlipFlop' (2#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/DFlipFlop.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'nBitRegister' (3#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/nBitRegister.v:23]
+INFO: [Synth 8-6157] synthesizing module 'InstMem' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/InstMem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'InstMem' (4#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/InstMem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'regFile' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/regFile.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'regFile' (5#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/regFile.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/ImmGen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (6#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/ImmGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALU.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'n_bit_RCA' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/Desktop/Lab 2/Lab 2.srcs/sources_1/new/n_bit_RCA.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Full_Adder' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/new/Full_Adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Full_Adder' (7#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/new/Full_Adder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_RCA' (8#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/Desktop/Lab 2/Lab 2.srcs/sources_1/new/n_bit_RCA.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 's' does not match port width (33) of module 'n_bit_RCA' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALU.v:35]
+INFO: [Synth 8-6157] synthesizing module 'mux16x1' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/mux16x1.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux16x1' (9#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/mux16x1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/DataMem.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (11#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/DataMem.v:22]
+INFO: [Synth 8-6157] synthesizing module 'cu' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'cu' (12#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'ALUsrc' does not match port width (1) of module 'cu' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:59]
+INFO: [Synth 8-6157] synthesizing module 'ALUcu' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALUcu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALUcu' (13#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALUcu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mMuxes' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/new/mMuxes.v:23]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mMuxes' (14#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/new/mMuxes.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 's' does not match port width (1) of module 'mMuxes' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:63]
+INFO: [Synth 8-155] case statement is not full and has no default [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:68]
+INFO: [Synth 8-155] case statement is not full and has no default [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:77]
+INFO: [Synth 8-6157] synthesizing module 'push_button_detector' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/push_button_detector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (15#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/debouncer.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'clk' does not match port width (1) of module 'debouncer' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/push_button_detector.v:37]
+INFO: [Synth 8-6157] synthesizing module 'synchronizer' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/synchronizer.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'synchronizer' (16#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/synchronizer.v:24]
+WARNING: [Synth 8-689] width (2) of port connection 'clk' does not match port width (1) of module 'synchronizer' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/push_button_detector.v:38]
+INFO: [Synth 8-6157] synthesizing module 'rising_edge_detector' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/rising_edge_detector.v:3]
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'rising_edge_detector' (17#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/rising_edge_detector.v:3]
+WARNING: [Synth 8-689] width (2) of port connection 'clk' does not match port width (1) of module 'rising_edge_detector' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/push_button_detector.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'push_button_detector' (18#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/push_button_detector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'F_Dig_7_dig' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:23]
+INFO: [Synth 8-6157] synthesizing module 'BCD' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/BCD.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BCD' (19#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/BCD.v:1]
+WARNING: [Synth 8-689] width (13) of port connection 'SW' does not match port width (7) of module 'BCD' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:36]
+WARNING: [Synth 8-3848] Net tho in module/entity F_Dig_7_dig does not have driver. [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'F_Dig_7_dig' (20#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/new/F_Dig_7_dig.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TOP' (21#1) [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:23]
+WARNING: [Synth 8-3917] design TOP has port Anode[7] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[6] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[5] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[4] driven by constant 1
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[12]
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[11]
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[10]
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[9]
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[8]
+WARNING: [Synth 8-3331] design F_Dig_7_dig has unconnected port SW[7]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[19]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[18]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[17]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[16]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[15]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[14]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[13]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[12]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[4]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[3]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[2]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[1]
+WARNING: [Synth 8-3331] design ImmGen has unconnected port inst[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.512 ; gain = 149.621
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.512 ; gain = 149.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.512 ; gain = 149.621
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [A:/AUC/Arch-Lab/project_1/project_1.srcs/constrs_1/new/TOP_const.xdc]
+Finished Parsing XDC File [A:/AUC/Arch-Lab/project_1/project_1.srcs/constrs_1/new/TOP_const.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [A:/AUC/Arch-Lab/project_1/project_1.srcs/constrs_1/new/TOP_const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 763.531 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "mem" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "regFile_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regFile_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "memtoreg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "ALUsel" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rising_edge_detector'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'gen_out_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/ImmGen.v:26]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab05/Lab05/Lab05.srcs/sources_1/new/DataMem.v:25]
+WARNING: [Synth 8-327] inferring latch for variable 'branch_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'memread_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'memtoreg_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUop_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'memwrite_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUsrc_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'regwrite_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/cu.v:36]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUsel_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/new/ALUcu.v:32]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                       A |                               00 |                               00
+                       B |                               01 |                               01
+                       C |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rising_edge_detector'
+WARNING: [Synth 8-327] inferring latch for variable 'LED_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:69]
+WARNING: [Synth 8-327] inferring latch for variable 'SSD_reg' [A:/AUC/Arch-Lab/project_1/project_1.srcs/sources_1/new/TOP.v:78]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 1     
+	   3 Input      2 Bit       Adders := 32    
++---Registers : 
+	               32 Bit    Registers := 32    
+	                1 Bit    Registers := 42    
++---Muxes : 
+	  11 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 164   
+	   5 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TOP 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+Module Mux2x1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module DFlipFlop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module InstMem 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input     32 Bit        Muxes := 1     
+Module regFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module ImmGen 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module Full_Adder 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      2 Bit       Adders := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module cu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 7     
+Module ALUcu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module rising_edge_detector 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module BCD 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 5     
+Module F_Dig_7_dig 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design TOP has port Anode[7] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[6] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[5] driven by constant 1
+WARNING: [Synth 8-3917] design TOP has port Anode[4] driven by constant 1
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[30]' (LD) to 'immediate/gen_out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[29]' (LD) to 'immediate/gen_out_reg[28]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[28]' (LD) to 'immediate/gen_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[27]' (LD) to 'immediate/gen_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[26]' (LD) to 'immediate/gen_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[25]' (LD) to 'immediate/gen_out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[24]' (LD) to 'immediate/gen_out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[23]' (LD) to 'immediate/gen_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[22]' (LD) to 'immediate/gen_out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[21]' (LD) to 'immediate/gen_out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[20]' (LD) to 'immediate/gen_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[19]' (LD) to 'immediate/gen_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[18]' (LD) to 'immediate/gen_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[17]' (LD) to 'immediate/gen_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[16]' (LD) to 'immediate/gen_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[15]' (LD) to 'immediate/gen_out_reg[14]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[14]' (LD) to 'immediate/gen_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[13]' (LD) to 'immediate/gen_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[12]' (LD) to 'immediate/gen_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[10]' (LD) to 'immediate/gen_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[9]' (LD) to 'immediate/gen_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[8]' (LD) to 'immediate/gen_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[7]' (LD) to 'immediate/gen_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[6]' (LD) to 'immediate/gen_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'immediate/gen_out_reg[5]' (LD) to 'immediate/gen_out_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ACPU/ALUsel_reg[3] )
+INFO: [Synth 8-3886] merging instance 'CPU/branch_reg' (LD) to 'CPU/ALUop_reg[0]'
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][31]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][30]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][29]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][28]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][27]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][26]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][25]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][24]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][23]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][22]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][21]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][20]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][19]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][18]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][17]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][16]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][15]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][14]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][13]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][12]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][11]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][10]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][9]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][8]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][7]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][6]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][5]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][4]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][3]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][2]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][1]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[31][0]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][31]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][30]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][29]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][28]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][27]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][26]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][25]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][24]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][23]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][22]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][21]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][20]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][19]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][18]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][17]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][16]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][15]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][14]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][13]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][12]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][11]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][10]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][9]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][8]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][7]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][6]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][5]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][4]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][3]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][2]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][1]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[30][0]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][31]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][30]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][29]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][28]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][27]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][26]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][25]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][24]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][23]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][22]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][21]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][20]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][19]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][18]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][17]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][16]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][15]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][14]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][13]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][12]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][11]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][10]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][9]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][8]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][7]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][6]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][5]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][4]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][3]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][2]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][1]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[29][0]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[28][31]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[28][30]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[28][29]) is unused and will be removed from module TOP.
+WARNING: [Synth 8-3332] Sequential element (register_file/regFile_reg[28][28]) is unused and will be removed from module TOP.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives      | 
++------------+------------+-----------+----------------------+-----------------+
+|TOP         | DM/mem_reg | Implied   | 64 x 32              | RAM64X1S x 32   | 
++------------+------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 763.531 ; gain = 506.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives      | 
++------------+------------+-----------+----------------------+-----------------+
+|TOP         | DM/mem_reg | Implied   | 64 x 32              | RAM64X1S x 32   | 
++------------+------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][31]' (FDCE) to 'register_file/regFile_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][31]' (FDCE) to 'register_file/regFile_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][31]' (FDCE) to 'register_file/regFile_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][31]' (FDCE) to 'register_file/regFile_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][8]' (FDCE) to 'register_file/regFile_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][9]' (FDCE) to 'register_file/regFile_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][7]' (FDCE) to 'register_file/regFile_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][12]' (FDCE) to 'register_file/regFile_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][13]' (FDCE) to 'register_file/regFile_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[0][8]' (FDCE) to 'register_file/regFile_reg[6][8]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[6][8]' (FDCE) to 'register_file/regFile_reg[7][8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][8] )
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[0][9]' (FDCE) to 'register_file/regFile_reg[6][9]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[6][9]' (FDCE) to 'register_file/regFile_reg[7][9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][9] )
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][11]' (FDCE) to 'register_file/regFile_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][10]' (FDCE) to 'register_file/regFile_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[0][7]' (FDCE) to 'register_file/regFile_reg[6][7]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[6][7]' (FDCE) to 'register_file/regFile_reg[7][7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][7] )
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][18]' (FDCE) to 'register_file/regFile_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[12][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[15][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[13][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[10][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[11][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[9][16]' (FDCE) to 'register_file/regFile_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'register_file/regFile_reg[14][17]' (FDCE) to 'register_file/regFile_reg[0][17]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[9][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\register_file/regFile_reg[7][30] )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     3|
+|2     |CARRY4   |    11|
+|3     |LUT1     |     4|
+|4     |LUT2     |    18|
+|5     |LUT3     |   145|
+|6     |LUT4     |    87|
+|7     |LUT5     |    36|
+|8     |LUT6     |   188|
+|9     |RAM64X1S |    32|
+|10    |FDCE     |   199|
+|11    |FDRE     |    34|
+|12    |LD       |    56|
+|13    |LDC      |     1|
+|14    |LDCP     |     1|
+|15    |LDP      |     1|
+|16    |IBUF     |     9|
+|17    |OBUF     |    31|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------+-----------------------+------+
+|      |Instance             |Module                 |Cells |
++------+---------------------+-----------------------+------+
+|1     |top                  |                       |   856|
+|2     |  ACPU               |ALUcu                  |    47|
+|3     |  CPU                |cu                     |     2|
+|4     |  DM                 |DataMem                |   103|
+|5     |  PC                 |nBitRegister           |   239|
+|6     |    \genblk1[0].dff  |DFlipFlop              |     1|
+|7     |    \genblk1[1].dff  |DFlipFlop_4            |     2|
+|8     |    \genblk1[2].dff  |DFlipFlop_5            |   162|
+|9     |    \genblk1[3].dff  |DFlipFlop_6            |    47|
+|10    |    \genblk1[4].dff  |DFlipFlop_7            |     4|
+|11    |    \genblk1[5].dff  |DFlipFlop_8            |    20|
+|12    |    \genblk1[6].dff  |DFlipFlop_9            |     3|
+|13    |  Push_clk           |push_button_detector   |    52|
+|14    |    debounce         |debouncer_1            |     4|
+|15    |    det              |rising_edge_detector_2 |     5|
+|16    |    synch            |synchronizer_3         |     2|
+|17    |  Push_rst           |push_button_detector_0 |    11|
+|18    |    debounce         |debouncer              |     4|
+|19    |    det              |rising_edge_detector   |     5|
+|20    |    synch            |synchronizer           |     2|
+|21    |  register_file      |regFile                |   323|
++------+---------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 605 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 813.203 ; gain = 199.293
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 813.203 ; gain = 556.312
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 91 instances were transformed.
+  LD => LDCE: 56 instances
+  LDC => LDCE: 1 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
+  LDP => LDPE: 1 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+232 Infos, 150 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 813.203 ; gain = 569.180
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'A:/AUC/Arch-Lab/project_1/project_1.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.049 . Memory (MB): peak = 813.203 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 19 16:19:01 2024...
