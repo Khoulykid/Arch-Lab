@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchTime="1712056408">
+  <File Type="PA-TCL" Name="RISCV_pipeline.tcl"/>
+  <File Type="REPORTS-TCL" Name="RISCV_pipeline_reports.tcl"/>
+  <File Type="RDS-RDS" Name="RISCV_pipeline.vds"/>
+  <File Type="RDS-DCP" Name="RISCV_pipeline.dcp"/>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
