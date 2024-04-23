@@ -42,7 +42,7 @@ module TOP(
     //wire new_clk, new_rst;  //wires to hold the value of the clock and reset after the push button.
     reg [12:0] SSD; //a reg to hold the value of the output we need before conversion for the SSD
     wire ALUsrc;
-    wire [31:0] write_out;
+    wire [31:0] write_out, ALUinA, ALUinB;
     wire [1:0] forwardA, forwardB;
 
     wire stall; //stall signal
@@ -63,12 +63,8 @@ module TOP(
         .outData({IF_ID_PC, IF_ID_Inst}));
 
 
-    //Reg File
 
-    regFile register_file( .readAddr1(IF_ID_Inst[19:15]), .readAddr2(IF_ID_Inst[24:20]), 
-    .writeAddr(inst[11:7]), .writeData(writedata), .clk(!new_clk), .rst(new_rst), .wr(MEM_WB_CTRL[5]),
-    .rd1(rd1), .rd2(rd2));
-
+    
     // ID_EX outputs
     wire [11:0] ID_EX_CTRL; //= wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr, ALUop, ALUsrc
     wire [31:0] ID_EX_PC, ID_EX_RegR1, ID_EX_RegR2, ID_EX_Imm;
@@ -82,7 +78,7 @@ module TOP(
     , .s(stall || branch_out), .out(ctrl));
 
     nBitRegister #(159) ID_EX(
-        .clk(new_clk), .rst(new_rst), .load(1),
+        .clk(new_clk), .rst(new_rst), .load(1'b1),
 
         .data({ctrl, IF_ID_PC, rd1, rd2, gen_out
         , IF_ID_Inst[30], IF_ID_Inst[IR_funct3], IF_ID_Inst[IR_rs1], IF_ID_Inst[IR_rs2], IF_ID_Inst[IR_rd]}), 
@@ -91,8 +87,14 @@ module TOP(
     
     //ALU
     mMuxes #(32) ALUinputmux(.b(ID_EX_RegR2), .a(ID_EX_Imm), .s(ID_EX_CTRL[0]), .out(ALUmux));
-    Mux4x1 #(32) ALU_final_input(in0(ALUmux), in1(write_out), ); //FILL LATER EDITAFTER after hazard and final mux
-    prv32_ALU #(32) ALU( .a(ID_EX_RegR1), .b(ALUmux), .shamt(ALUmux[4:0]), .alufn(ALUsel)
+    
+    Mux4x1 #(32) ALU_final_B(in0(ALUmux), in1(write_out)
+    , .in2(EX_MEM_ALU_out), .in3(0), .s(forwardB), .out(ALUinB) ); //FILL LATER EDITAFTER after hazard and final mux
+    
+    Mux4x1 #(32) ALU_final_A(.in0(ID_EX_RegR1), .in1(write_out)
+    , .in2(EX_MEM_ALU_out), .in3(0), .s(forwardA), .out(ALUinA) ); //FILL LATER EDITAFTER after hazard and final mux
+    
+    prv32_ALU #(32) ALU( .a(ALUinA), .b(ALUinB), .shamt(ALUinB[4:0]), .alufn(ALUsel)
     , .r(ALUout), .zf(zf), .cf(cf), .vf(vf), .sf(sf));
 
     //the ALUCU
@@ -106,9 +108,7 @@ module TOP(
     wire [2:0] EX_MEM_Func3;
     wire [8:0] EX_MEM_new_ctrl;
 
-    forwarding_unit FA(.IDEXRegisterRs1(ID_EX_RS1), .IDEXRegisterRs2(ID_EX_RS2), .EXMEMRegisterRd(EX_MEM_Rd)
-    , .MEMWBRegisterRd(MEM_WB_Rd), .EXMEMRegWrite(EX_MEM_CTRL[8]), .MEMWBRegWrite(MEM_WB_CTRL[5]), .forwardA(forwardA), .forwardB(forwardB));
-
+    
     mMuxes #(9) EX_MEM_ctrl_mux(.a(9'd0), .b(ID_EX_CTRL[11:3]), s(branch_out), .out(EX_MEM_new_ctrl));  //EDITAFTER  branching
 
     nBitRegister #(149) EX_MEM
@@ -144,10 +144,20 @@ module TOP(
     , .s({MEM_WB_CTRL[2] | MEM_WB_CTRL[3], (MEM_WB_CTRL[0]|MEM_WB_CTRL[1])|MEM_WB_CTRL[2]}), .out(write_out));
 
 
+    forwarding_unit FA(.IDEXRegisterRs1(ID_EX_RS1), .IDEXRegisterRs2(ID_EX_RS2), .EXMEMRegisterRd(EX_MEM_Rd)
+    , .MEMWBRegisterRd(MEM_WB_Rd), .EXMEMRegWrite(EX_MEM_CTRL[8]), .MEMWBRegWrite(MEM_WB_CTRL[5]), .forwardA(forwardA), .forwardB(forwardB));
+
 
     InstMem instructions(.addr(PCout[7:2]), .data_out(inst));   //The Instruction Memory
     
-    
+    hazardCU HC(.IFIDRegisterRs1(IF_ID_Inst[IR_rs1]), .IFIDRegisterRs2(IF_ID_Inst[IR_rs2])
+    , .IDEXRegisterRd(ID_EX_RD), .IDEXMemRead(ID_EX_CTRL[9]), .stall(stall));
+
+    //Reg File
+    regFile register_file( .readAddr1(IF_ID_Inst[19:15]), .readAddr2(IF_ID_Inst[24:20]), 
+    .writeAddr(inst[11:7]), .writeData(writedata), .clk(!new_clk), .rst(new_rst), .wr(MEM_WB_CTRL[5]),
+    .rd1(rd1), .rd2(rd2));
+
     
     
     rv32_ImmGen immediate(.Imm(gen_out), .IR(IF_ID_Inst));   //Immediate Generator

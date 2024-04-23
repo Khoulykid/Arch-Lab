@@ -21,20 +21,12 @@
 
 
 module InstMem(input clk, input MemRead, input MemWrite,
-    input [5:0] addr, input [31:0] data_in, output reg [31:0] data_out); 
+    input [5:0] addr, input [31:0] data_in, output [31:0] data_out); 
     reg [7:0] mem [(4*1024-1):0]; //4KB memory
+    assign data_out = MemRead ? {mem[addr/4], mem[(addr/4) + 1], mem[(addr/4) + 2], mem[(addr/4) + 3]} : data_out;
     always @(posedge clk) begin
-        data_out <= {mem[addr/4], mem[(addr/4)+1], mem[(addr/4)+2], mem[(addr/4)+3]};
-    end
-    always @(negedge clk) begin
         if (MemWrite) begin
             {mem[addr/4], mem[(addr/4)+1], mem[(addr/4)+2], mem[(addr/4)+3]} <= data_in;
-        end
-        if(MemRead) begin
-            data_out <= {mem[addr/4], mem[(addr/4)+1], mem[(addr/4)+2], mem[(addr/4)+3]};
-        end
-        else begin
-            data_out <= 32'b0;
         end
     end
 
