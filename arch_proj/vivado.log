@@ -24,3 +24,15 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'A:/Xillinx/Vivado/2018.2/da
 open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 748.332 ; gain = 56.719
 update_compile_order -fileset sources_1
 save_project_as khouly_proj A:/AUC/Arch-Lab/khouly_proj -force
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 22 01:14:47 2024...

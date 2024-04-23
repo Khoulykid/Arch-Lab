@@ -23,8 +23,8 @@
 module RISCV_pipeline(
     input [1:0] ledSel, //input to select what the output on the LED will represent
     input [3:0] ssdSel, //to choose what will be represented on the SSD
-    input clk,  //clock input
-    input rst,  //reset input
+    input new_clk,  //clock input
+    input new_rst,  //reset input
     input SSDclk,   //The clock for SSD
     output reg [15:0] LED,  //The LEDs
     output [7:0] Anode, //Anodes for the SSD
@@ -165,8 +165,8 @@ module RISCV_pipeline(
         endcase
     end
     
-    push_button_detector Push_clk(.clk(SSDclk), .rst(0), .x(clk), .z(new_clk));
-    push_button_detector Push_rst(.clk(SSDclk), .rst(0), .x(rst), .z(new_rst));
+    //push_button_detector Push_clk(.clk(SSDclk), .rst(0), .x(clk), .z(new_clk));
+    //push_button_detector Push_rst(.clk(SSDclk), .rst(0), .x(rst), .z(new_rst));
     F_Dig_7_dig sevenSeg(.clk(SSDclk), .SW(SSD), .Anode(Anode[3:0]), .LED_out(LED_out));
     assign Anode[7:4] = 4'b1111;
     
