@@ -3,8 +3,7 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: A:/Xillinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto eebe66cc68df4dfda42b759f06711f27 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-2572] too many parameters for module instance ALU [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v:162]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port load [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v:115]
+WARNING: [VRFC 10-2572] too many parameters for module instance ALU [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v:170]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,11 +13,11 @@ Compiling module xil_defaultlib.DFlipFlop
 Compiling module xil_defaultlib.nBitRegister(n=32)
 Compiling module xil_defaultlib.mMuxes(n=32)
 Compiling module xil_defaultlib.nBitRegister(n=64)
-Compiling module xil_defaultlib.mMuxes(n=12)
-Compiling module xil_defaultlib.nBitRegister(n=159)
+Compiling module xil_defaultlib.mMuxes(n=16)
+Compiling module xil_defaultlib.nBitRegister(n=163)
 Compiling module xil_defaultlib.Mux4x1(n=32)
-Compiling module xil_defaultlib.mMuxes(n=9)
-Compiling module xil_defaultlib.nBitRegister(n=149)
+Compiling module xil_defaultlib.mMuxes(n=13)
+Compiling module xil_defaultlib.nBitRegister(n=153)
 Compiling module xil_defaultlib.branch_control
 Compiling module xil_defaultlib.nBitRegister(n=139)
 Compiling module xil_defaultlib.forwarding_unit

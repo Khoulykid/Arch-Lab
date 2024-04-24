@@ -47,11 +47,17 @@ module TOP(
     wire [31:0] EX_MEM_RegR2, EX_MEM_ALU_out;
     wire [4:0] EX_MEM_Rd;
     wire [31:0] meta;
+    wire unsignedFlag;
+    wire [1:0] memOffset;
+    wire fin;
+    wire [12:0] EX_MEM_CTRL; //= fin, memOffset, unsignedFlag, wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr
+
 
     wire stall; //stall signal
 
     //PC
-    nBitRegister #(32) PC(.data(newpc), .clk(new_clk), .rst(new_rst), .load(!stall && !EX_MEM_CTRL[6]), .outData(PCout));
+    nBitRegister #(32) PC(.data(newpc), .clk(new_clk), .rst(new_rst)
+    , .load(!stall && !EX_MEM_CTRL[6] && !EX_MEM_CTRL[7] && !EX_MEM_CTRL[12]), .outData(PCout));
 
     //IF_ID outputs(wires) and new input of the mux
     wire [31:0] IF_ID_PC, IF_ID_Inst, newInst;
@@ -59,10 +65,11 @@ module TOP(
 
     //mux to decide input when jumping
     mMuxes #(32) IF_ID_Input(.a(32'b0000000_00000_00000_000_00000_0110011), .b(memdata)
-    , .s(branch_out | EX_MEM_CTRL[6] | EX_MEM_CTRL[0] | EX_MEM_CTRL[1]), .out(newInst));
+    , .s(branch_out | EX_MEM_CTRL[6] | EX_MEM_CTRL[7] | EX_MEM_CTRL[0] | EX_MEM_CTRL[1]
+     | (memdata == 32'b00000000000100000000000001110011) | (memdata==32'b00000000000000000001000000001111)), .out(newInst));
 
     nBitRegister #(64) IF_ID(
-        .clk(new_clk), .rst(new_rst), .load(!stall), 
+        .clk(new_clk), .rst(new_rst), .load(!stall && !EX_MEM_CTRL[12]), 
         .data({PCout, newInst}), 
         .outData({IF_ID_PC, IF_ID_Inst}));
 
@@ -70,26 +77,26 @@ module TOP(
 
     
     // ID_EX outputs
-    wire [11:0] ID_EX_CTRL; //= wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr, ALUop, ALUsrc
+    wire [15:0] ID_EX_CTRL; //= fin, memOffset, unsignedFlag, wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr, ALUop, ALUsrc
     wire [31:0] ID_EX_PC, ID_EX_RegR1, ID_EX_RegR2, ID_EX_Imm;
     wire ID_EX_Func7;
     wire [2:0] ID_EX_Func3;
     wire [4:0] ID_EX_RS1, ID_EX_RS2, ID_EX_RD;
 
-    wire [11:0] ctrl;
+    wire [15:0] ctrl;
 
-    mMuxes #(12) ID_EX_ctrl_in(.a(12'd0), .b({wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr, ALUop, ALUsrc})
-    , .s(stall || EX_MEM_CTRL[6] || branch_out || new_rst || EX_MEM_CTRL[0] || EX_MEM_CTRL[1]), .out(ctrl));
+    mMuxes #(16) ID_EX_ctrl_in(.a(16'd0), .b({fin, memOffset, unsignedFlag, wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr, ALUop, ALUsrc})
+    , .s(stall || EX_MEM_CTRL[6] || EX_MEM_CTRL[7] || branch_out || new_rst || EX_MEM_CTRL[0] || EX_MEM_CTRL[1]), .out(ctrl));
 
-    nBitRegister #(159) ID_EX(
-        .clk(new_clk), .rst(new_rst), .load(1'b1),
+    nBitRegister #(163) ID_EX(
+        .clk(new_clk), .rst(new_rst), .load(!EX_MEM_CTRL[12]),  //change
 
         .data({ctrl, IF_ID_PC, rd1, rd2, gen_out
         , IF_ID_Inst[30], IF_ID_Inst[`IR_funct3], IF_ID_Inst[`IR_rs1], IF_ID_Inst[`IR_rs2], IF_ID_Inst[`IR_rd]}), 
 
         .outData({ID_EX_CTRL, ID_EX_PC, ID_EX_RegR1, ID_EX_RegR2, ID_EX_Imm, ID_EX_Func7, ID_EX_Func3, ID_EX_RS1, ID_EX_RS2, ID_EX_RD}));
     
-    //ALU
+    
     mMuxes #(32) ALUinputmux(.b(ID_EX_RegR2), .a(ID_EX_Imm), .s(ID_EX_CTRL[0]), .out(ALUmux));
     
     Mux4x1 #(32) ALU_final_B(.in0(ALUmux), .in1(write_out)
@@ -101,18 +108,18 @@ module TOP(
     
 
     wire [31:0] EX_MEM_PC, EX_MEM_Imm;
-    wire [8:0] EX_MEM_CTRL; //= wr, memwrite, memread, memtoreg, lui, auipc, branch, jal, jalr
+    
     
     wire [3:0] EX_MEM_Flags;    //= zf, cf, vf, sf
     wire [2:0] EX_MEM_Func3;
-    wire [8:0] EX_MEM_new_ctrl;
+    wire [12:0] EX_MEM_new_ctrl;
 
     
-    mMuxes #(9) EX_MEM_ctrl_mux(.a(9'd0), .b(ID_EX_CTRL[11:3]), .s(branch_out | EX_MEM_CTRL[0] | EX_MEM_CTRL[1]), .out(EX_MEM_new_ctrl));  //EDITAFTER  branching
+    mMuxes #(13) EX_MEM_ctrl_mux(.a(13'd0), .b(ID_EX_CTRL[15:3]), .s(branch_out | EX_MEM_CTRL[0] | EX_MEM_CTRL[1]), .out(EX_MEM_new_ctrl));  //EDITAFTER  branching
 
-    nBitRegister #(149) EX_MEM
+    nBitRegister #(153) EX_MEM
     (
-        .clk(new_clk), .rst(new_rst), .load(1),
+        .clk(new_clk), .rst(new_rst), .load(!EX_MEM_CTRL[12]),
         .data({EX_MEM_new_ctrl, ID_EX_PC, ID_EX_Imm, zf, cf, vf, sf, ALUout, ID_EX_RegR2, ID_EX_RD, ID_EX_Func3}),
         .outData({EX_MEM_CTRL, EX_MEM_PC, EX_MEM_Imm, EX_MEM_Flags, EX_MEM_ALU_out, EX_MEM_RegR2, EX_MEM_Rd, EX_MEM_Func3})
     );
@@ -134,7 +141,7 @@ module TOP(
     //MEM WB
     nBitRegister #(139) MEM_WB
     (
-        .clk(new_clk), .rst(new_rst), .load(1'b1),
+        .clk(new_clk), .rst(new_rst), .load(!EX_MEM_CTRL[12]),
         .data({EX_MEM_CTRL[8], EX_MEM_CTRL[5:3], EX_MEM_CTRL[1:0], memdata, EX_MEM_ALU_out, EX_MEM_Rd, EX_MEM_PC, EX_MEM_Imm}),
         .outData({MEM_WB_CTRL, MEM_WB_Mem_out, MEM_WB_ALU_out, MEM_WB_Rd, MEM_WB_PC, MEM_WB_Imm})   //ERROR MIGHT BE IN CTRL
     );
@@ -159,6 +166,7 @@ module TOP(
     .writeAddr(MEM_WB_Rd), .writeData(write_out), .clk(!new_clk), .rst(new_rst), .wr(MEM_WB_CTRL[5]),
     .rd1(rd1), .rd2(rd2));
 
+    //ALU
     prv32_ALU #(32) ALU( .a(ALUinA), .b(ALUinB), .shamt(ALUinB[4:0]), .alufn(ALUsel)
     , .r(ALUout), .zf(zf), .cf(cf), .vf(vf), .sf(sf));
 
@@ -172,11 +180,12 @@ module TOP(
     
     
     mMuxes #(32) Mem_use(.a(EX_MEM_ALU_out), .b(PCout), .s(EX_MEM_CTRL[6]), .out(meta));
-    DataMem DM(.clk(new_clk), .MemRead(1'b1), .MemWrite(EX_MEM_CTRL[7]), .addr(meta), .data_in(EX_MEM_RegR2),
+    DataMem DM(.clk(new_clk), .MemRead(!EX_MEM_CTRL[12]), .MemWrite(EX_MEM_CTRL[7]), .addr(meta), .data_in(EX_MEM_RegR2),
                 .data_out(memdata));    //Our Memory.
     
-    cu CPU( .inst62(IF_ID_Inst[6:2]), .branch(branch), .memread(memread), .memtoreg(memtoreg),
-    .ALUop(ALUop), .memwrite(memwrite), .ALUsrc(ALUsrc), .regwrite(wr), .jal(jal), .jalr(jalr), .lui(lui), .auipc(auipc));    //the CPU
+    cu CPU( .inst62(IF_ID_Inst[6:2]), .inst_20(IF_ID_Inst[20]), .func3(IF_ID_Inst[14:12]), .branch(branch), .memread(memread), .memtoreg(memtoreg)
+    , .ALUop(ALUop), .memwrite(memwrite), .ALUsrc(ALUsrc), .regwrite(wr), .jal(jal), .jalr(jalr), .lui(lui), .auipc(auipc)
+    , .unsignedFlag(unsignedFlag), .memOffset(memOffset), .fin(fin));    //the CPU
     
     
     

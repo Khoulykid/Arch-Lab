@@ -14,7 +14,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/khouly_proj/khouly_
 INFO: [VRFC 10-311] analyzing module branch_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/cu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cu
-WARNING: [VRFC 10-2096] empty statement in sequential block [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/cu.v:48]
 INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/forwarding_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module forwarding_unit
 INFO: [VRFC 10-2263] Analyzing Verilog file "A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/hazardCU.v" into library xil_defaultlib
