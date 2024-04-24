@@ -64,6 +64,7 @@ for i in range(instructions):
             funct7 = "0000000"
         elif(fun_dec == 7):
             funct3 = "101"
+            funct7 = ""
             if(get_random_number(1) == 0):
                 funct7 = "0000000"
             else:
@@ -109,7 +110,7 @@ for i in range(instructions):
         opcode = "11000"
         rs1 = bin(get_random_number(31))[2:].zfill(5)
         rs2 = bin(get_random_number(31))[2:].zfill(5)
-        imm = bin(get_random_number(10)*4)[2:].zfill(12)
+        imm = bin(get_random_number(10)*4)[2:].zfill(13)
         imm1 = imm[1:5][::-1] + imm[11]
         imm2 = imm[12] + imm[5:11][::-1]
         fun_dec = get_random_number(2)
@@ -138,9 +139,12 @@ for i in range(instructions):
             
     elif(opdecide == 8):
         opcode = "11001"
+        rd = bin(get_random_number(31))[2:].zfill(5)
+        rs1 = bin(get_random_number(31))[2:].zfill(5)
         funct3 = "000"
         imm = bin(get_random_number(10)*4)[2:].zfill(12)
-        inst = imm + funct3 + rd + opcode + "11"
+        inst = imm + rs1 + funct3 + rd + opcode + "11"
+        print(inst)
     elif(opdecide == 9):
         opcode = "11100"
         fun_dec = get_random_number(1)
