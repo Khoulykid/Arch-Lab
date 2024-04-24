@@ -31,7 +31,7 @@ module ALUcu(
     
     always @* begin
         case(ALUop)
-            2'b00: ALUsel = 4'b0010;
+            2'b00: ALUsel = 4'b0000;
             2'b01: ALUsel = 4'b0110;
             default: begin
                 case(inst_14_12)

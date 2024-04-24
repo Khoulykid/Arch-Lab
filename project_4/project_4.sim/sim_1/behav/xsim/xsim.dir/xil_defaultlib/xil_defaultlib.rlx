@@ -27,7 +27,7 @@ A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/VerilogSrc/prv32_ALU.
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/new/BCD.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/Desktop/Lab03/Lab03.srcs/sources_1/new/DFlipFlop.v,,BCD,,,,,,,,
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/new/F_Dig_7_dig.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/Desktop/Lab04/Lab04/Lab04.srcs/sources_1/imports/new/Full_Adder.v,,F_Dig_7_dig,,,,,,,,
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/Mux4to1.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/hazardCU.v,,Mux4to1,,,,,,,,
-A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/RISCV_pipeline.v,1712175708,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/VerilogSrc/prv32_ALU.v,,RISCV_pipeline,,,,,,,,
+A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/RISCV_pipeline.v,1713902931,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/imports/VerilogSrc/prv32_ALU.v,,RISCV_pipeline,,,,,,,,
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/TOP.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/rising_edge_detector.v,,TOP,,,,,,,,
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/debouncer.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/synchronizer.v,,debouncer,,,,,,,,
 A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/forwarding_unit.v,1712175195,verilog,,A:/AUC/Arch-Lab/project_4/project_4.srcs/sources_1/new/Mux4to1.v,,forwarding_unit,,,,,,,,

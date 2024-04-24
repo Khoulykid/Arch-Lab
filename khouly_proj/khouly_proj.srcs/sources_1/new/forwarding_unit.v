@@ -29,16 +29,16 @@ module forwarding_unit(
     always @* begin 
         if ( EXMEMRegWrite & (EXMEMRegisterRd != 0) & (EXMEMRegisterRd == IDEXRegisterRs1) )  begin
             forwardA = 2'b10; end 
-            
-        else if ( EXMEMRegWrite & (EXMEMRegisterRd != 0) & (EXMEMRegisterRd == IDEXRegisterRs2) ) begin
-            forwardB = 2'b10;  end 
+             
         else if ( MEMWBRegWrite & (MEMWBRegisterRd != 0) & (MEMWBRegisterRd == IDEXRegisterRs1) 
             & !( EXMEMRegWrite & !(EXMEMRegisterRd == 0) & (EXMEMRegisterRd == IDEXRegisterRs1) ))
             forwardA = 2'b01;
+        if ( EXMEMRegWrite & (EXMEMRegisterRd != 0) & (EXMEMRegisterRd == IDEXRegisterRs2) ) begin
+            forwardB = 2'b10;  end
         else if (( MEMWBRegWrite & (MEMWBRegisterRd != 0)
             & (MEMWBRegisterRd == IDEXRegisterRs2) )
             & ! ( EXMEMRegWrite & (EXMEMRegisterRd != 0)
-            & (EXMEMRegisterRd == IDEXRegisterRs2) ))
+            & (EXMEMRegisterRd == IDEXRegisterRs2)) )
             forwardB = 2'b01;
         else begin forwardA = 2'b00; forwardB = 2'b00; end 
 

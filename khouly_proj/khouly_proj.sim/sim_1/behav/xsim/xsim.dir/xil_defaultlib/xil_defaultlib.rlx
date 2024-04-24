@@ -1,0 +1,24 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.sim/sim_1/behav/xsim/glbl.v,1711619538,verilog,,,,glbl,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sim_1/new/top_tb.v,1713916443,verilog,,,,top_tb,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/ALUcu.v,1713917838,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DFlipFlop.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,ALUcu,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DFlipFlop.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DataMem.v,,DFlipFlop,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DataMem.v,1713918188,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,,DataMem,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/InstMem.v,1713907399,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,,InstMem,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux4x1.v,,Mux2x1,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux4x1.v,1713893717,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v,,Mux4x1,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v,1713918762,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/branch_control.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,TOP,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/branch_control.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/cu.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,branch_control,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/cu.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/forwarding_unit.v,,cu,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,1713730100,verilog,,,,,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/forwarding_unit.v,1713919361,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/hazardCU.v,,forwarding_unit,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/hazardCU.v,1712175195,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/mMuxes.v,,hazardCU,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/mMuxes.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/nBitRegister.v,,mMuxes,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/nBitRegister.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/prv32_ALU.v,,nBitRegister,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/prv32_ALU.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/regFile.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,prv32_ALU,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/regFile.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/rv32_ImmGen.v,,regFile,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/rv32_ImmGen.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/sl1.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,rv32_ImmGen,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/sl1.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sim_1/new/top_tb.v,,sl1,,,,,,,,

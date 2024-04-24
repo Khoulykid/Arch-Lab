@@ -34,9 +34,9 @@ module top_tb();
     TOP DUT ( ledSel, ssdSel, new_clk, new_rst, SSDclk);
     initial begin 
         new_rst = 1;    
-        #15 
+        #10
         new_rst = 0; 
-        #500 
+        #310 
         $finish;
 
     end 
