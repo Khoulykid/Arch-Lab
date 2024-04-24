@@ -1,0 +1,24 @@
+// add x0, x0, x0
+// sub x1, x3, x1
+// sll x3, x4, x5
+//slt x4, x5, x6
+// slt x5, x6, x5
+// xor x6, x7, x8
+// srl x7, x7, x1
+// or x8, x8, x15
+// and x9, x9, x10
+// addi x10, x10, 2
+// slti x11, x11, 31
+// xori x12, x15, 10
+// ori x13, x15, 10
+// andi x14, x15, 10
+// lui x15, 5
+//ebreak
+// auipc x16,
+// jal x17, 8
+// addi x18, x18, 1
+// addi x19, x19, 1
+// addi x20, x20, 1
+// addi x22, x22, 1
+// lw x23, 96(x0)
+//add x22, x22, x22

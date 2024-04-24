@@ -178,9 +178,10 @@ module TOP(
     
     rv32_ImmGen immediate(.Imm(gen_out), .IR(IF_ID_Inst));   //Immediate Generator
     
-    
+    wire [1:0] newoffset;
     mMuxes #(32) Mem_use(.a(EX_MEM_ALU_out), .b(PCout), .s(EX_MEM_CTRL[6]), .out(meta));
-    DataMem DM(.clk(new_clk), .MemRead(!EX_MEM_CTRL[12]), .MemWrite(EX_MEM_CTRL[7]), .addr(meta), .data_in(EX_MEM_RegR2),
+    mMuxes #(2) Mem_offset(.a(EX_MEM_CTRL), .b(2'b11), .s(EX_MEM_CTRL[6]), .out(newoffset));
+    DataMem DM(.clk(new_clk), .MemRead(!EX_MEM_CTRL[12]), .MemWrite(EX_MEM_CTRL[7]), .memOffset(newoffset), .unsignedFlag(EX_MEM_CTRL[9]), .addr(meta), .data_in(EX_MEM_RegR2),
                 .data_out(memdata));    //Our Memory.
     
     cu CPU( .inst62(IF_ID_Inst[6:2]), .inst_20(IF_ID_Inst[20]), .func3(IF_ID_Inst[14:12]), .branch(branch), .memread(memread), .memtoreg(memtoreg)

@@ -4,6 +4,7 @@ Running: A:/Xillinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto eebe66cc6
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-2572] too many parameters for module instance ALU [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v:170]
+WARNING: [VRFC 10-278] actual bit length 13 differs from formal bit length 2 for port a [A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v:183]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -27,6 +28,7 @@ Compiling module xil_defaultlib.sl1(n=32)
 Compiling module xil_defaultlib.prv32_ALU
 Compiling module xil_defaultlib.ALUcu
 Compiling module xil_defaultlib.rv32_ImmGen
+Compiling module xil_defaultlib.mMuxes(n=2)
 Compiling module xil_defaultlib.DataMem
 Compiling module xil_defaultlib.cu
 Compiling module xil_defaultlib.TOP
