@@ -6,7 +6,7 @@ A:/AUC/Arch-Lab/khouly_proj/khouly_proj.sim/sim_1/behav/xsim/glbl.v,1711619538,v
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sim_1/new/top_tb.v,1713916443,verilog,,,,top_tb,,,,,,,,
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/ALUcu.v,1713917838,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DFlipFlop.v,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/defines.v,ALUcu,,,,,,,,
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DFlipFlop.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DataMem.v,,DFlipFlop,,,,,,,,
-A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DataMem.v,1713929734,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,,DataMem,,,,,,,,
+A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/DataMem.v,1713930707,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,,DataMem,,,,,,,,
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/InstMem.v,1713907399,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,,InstMem,,,,,,,,
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux2x1.v,1711619538,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux4x1.v,,Mux2x1,,,,,,,,
 A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/Mux4x1.v,1713893717,verilog,,A:/AUC/Arch-Lab/khouly_proj/khouly_proj.srcs/sources_1/new/TOP.v,,Mux4x1,,,,,,,,
